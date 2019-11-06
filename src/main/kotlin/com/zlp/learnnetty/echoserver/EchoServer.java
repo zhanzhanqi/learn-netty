@@ -37,6 +37,7 @@ public class EchoServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            System.out.println("new channel created");
                             socketChannel.pipeline().addLast(serverHandler);
                         }
                     });
